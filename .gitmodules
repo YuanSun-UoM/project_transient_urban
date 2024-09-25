@@ -1,3 +1,6 @@
 [submodule "1_code_DynamicUrbanAlbedo"]
 	path = 1_code_DynamicUrbanAlbedo
 	url = https://github.com/envdes/code_DynamicUrbanAlbedo.git
+[submodule "2_ctsm_DynamicUrbanAlbedo"]
+	path = 2_ctsm_DynamicUrbanAlbedo
+	url = https://github.com/YuanSun-UoM/ctsm_DynamicUrbanAlbedo.git
