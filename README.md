@@ -37,3 +37,7 @@ git submodule add https://github.com/YuanSun-UoM/ctsm_DynamicUrbanAlbedo.git 2_c
 
 - [jobscript_archer2](./3_simulation_record/jobscript_archer2)
 - [notes.md](2_model_DynamicUrbanAlbedo/notes.md)
+
+
+
+## [4_work_record](./4_work_record)

@@ -1,0 +1,1 @@
+[Previous cover image](https://agupubs.onlinelibrary.wiley.com/loi/19422466/year/2024)
