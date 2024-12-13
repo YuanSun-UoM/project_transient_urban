@@ -1,0 +1,48 @@
+create a new case in '/mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/scratch/case2_test'
+Did not find an alias or longname compset match for SSP370_DATM%CPLHIST_CLM50%SP_SICE_SOCN_MOSART_SGLC_SWAV 
+Compset forcing is CMIP6 SSP3-7.0 forcing
+ATM component is  Data driven ATM  Coupler hist data set (in this mode, it is strongly recommended that the model domain and the coupler history forcing are on the same domain)
+LND component is clm5.0:Satellite phenology:
+ICE component is Stub ice component
+OCN component is Stub ocn component
+ROF component is MOSART: MOdel for Scale Adaptive River Transport
+GLC component is Stub glacier (land ice) component
+WAV component is Stub wave component
+ESP component is 
+Pes     specification file is /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn2/cime/../components/clm//cime_config/config_pes.xml
+Compset specific settings: name is RUN_STARTDATE and value is 1850-01-01
+Machine is csf3
+Pes setting: grid match    is l%0.9x1.25 
+Pes setting: grid          is a%0.9x1.25_l%0.9x1.25_oi%null_r%r05_g%null_w%null_m%gx1v7 
+Pes setting: compset       is SSP370_DATM%CPLHIST_CLM50%SP_SICE_SOCN_MOSART_SGLC_SWAV 
+Pes setting: tasks       is {'NTASKS_ATM': -4, 'NTASKS_ICE': -4, 'NTASKS_CPL': -4, 'NTASKS_LND': -4, 'NTASKS_WAV': -4, 'NTASKS_ROF': -4, 'NTASKS_OCN': -4, 'NTASKS_GLC': -4} 
+Pes setting: threads     is {'NTHRDS_ICE': 1, 'NTHRDS_ATM': 1, 'NTHRDS_ROF': 1, 'NTHRDS_LND': 1, 'NTHRDS_WAV': 1, 'NTHRDS_OCN': 1, 'NTHRDS_CPL': 1, 'NTHRDS_GLC': 1} 
+Pes setting: rootpe      is {'ROOTPE_OCN': 0, 'ROOTPE_LND': 0, 'ROOTPE_ATM': 0, 'ROOTPE_ICE': 0, 'ROOTPE_WAV': 0, 'ROOTPE_CPL': 0, 'ROOTPE_ROF': 0, 'ROOTPE_GLC': 0} 
+Pes setting: pstrid      is {} 
+Pes other settings: {}
+Pes comments: none
+ Compset is: SSP370_DATM%CPLHIST_CLM50%SP_SICE_SOCN_MOSART_SGLC_SWAV 
+ Grid is: a%0.9x1.25_l%0.9x1.25_oi%null_r%r05_g%null_w%null_m%gx1v7 
+ Components in compset are: ['datm', 'clm', 'sice', 'socn', 'mosart', 'sglc', 'swav', 'sesp', 'drv', 'dart'] 
+No project info available
+No charge_account info available, using value from PROJECT
+No project info available
+cesm model version found: release-cesm2.1.4
+Batch_system_type is none
+ Creating Case directory /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/scratch/case2_test
+Creating component namelists
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn2/cime/src/components/data_comps/datm/cime_config/buildnml
+Creating component namelists
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn2/cime/src/components/data_comps/datm/cime_config/buildnml
+Building case in directory /net/scratch2/a16404ys/Projects/scratch/case2_test
+sharedlib_only is False
+model_only is False
+CASE INFO:
+  nodes: 8
+  total tasks: 128
+  tasks per node: 16
+  thread count: 1
+
+BATCH INFO:
+Creating component namelists
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn2/cime/src/components/data_comps/datm/cime_config/buildnml

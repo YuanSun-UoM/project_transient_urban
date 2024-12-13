@@ -1,0 +1,8 @@
+/mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/scratch/case2_test/env_mach_specific.xml already exists, delete to replace
+cp: omitting directory ‘/mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/scratch/20231212spinup/run/timing’
+      module command is /opt/clusterware/opt/modules/bin/modulecmd python load compilers/gcc/8.2.0 libs/gcc/netcdf/4.9.2 mpi/gcc/openmpi/4.1.2-gcc-8.2.0 libs/blas/3.6.0/gcc-4.8.5 libs/lapack/3.5.0/gcc-4.8.5 apps/cmake/3.5.2/gcc-4.8.5
+      module command is /opt/clusterware/opt/modules/bin/modulecmd python load compilers/gcc/8.2.0 libs/gcc/netcdf/4.9.2 mpi/gcc/openmpi/4.1.2-gcc-8.2.0 libs/blas/3.6.0/gcc-4.8.5 libs/lapack/3.5.0/gcc-4.8.5 apps/cmake/3.5.2/gcc-4.8.5
+submit_jobs case.run
+Submit job case.run
+ERROR: RUN FAIL: Command 'mpirun  -np 128 /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/scratch/case2_test/bld/cesm.exe  >> cesm.log.$LID 2>&1 ' failed
+See log file for details: /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/scratch/case2_test/run/cesm.log.240308-113705

@@ -1,0 +1,216 @@
+create a new case in '/mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/scratch/RRCase5_1'
+Did not find an alias or longname compset match for SSP370_DATM%CPLHIST_CLM50%SP_SICE_SOCN_MOSART_SGLC_SWAV 
+Compset forcing is CMIP6 SSP3-7.0 forcing
+ATM component is  Data driven ATM  Coupler hist data set (in this mode, it is strongly recommended that the model domain and the coupler history forcing are on the same domain)
+LND component is clm5.0:Satellite phenology:
+ICE component is Stub ice component
+OCN component is Stub ocn component
+ROF component is MOSART: MOdel for Scale Adaptive River Transport
+GLC component is Stub glacier (land ice) component
+WAV component is Stub wave component
+ESP component is 
+Pes     specification file is /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/cime/../components/clm//cime_config/config_pes.xml
+Compset specific settings: name is RUN_STARTDATE and value is 1850-01-01
+Machine is csf3
+Pes setting: grid match    is l%0.9x1.25 
+Pes setting: grid          is a%0.9x1.25_l%0.9x1.25_oi%null_r%r05_g%null_w%null_m%gx1v7 
+Pes setting: compset       is SSP370_DATM%CPLHIST_CLM50%SP_SICE_SOCN_MOSART_SGLC_SWAV 
+Pes setting: tasks       is {'NTASKS_ATM': -4, 'NTASKS_ICE': -4, 'NTASKS_CPL': -4, 'NTASKS_LND': -4, 'NTASKS_WAV': -4, 'NTASKS_ROF': -4, 'NTASKS_OCN': -4, 'NTASKS_GLC': -4} 
+Pes setting: threads     is {'NTHRDS_ICE': 1, 'NTHRDS_ATM': 1, 'NTHRDS_ROF': 1, 'NTHRDS_LND': 1, 'NTHRDS_WAV': 1, 'NTHRDS_OCN': 1, 'NTHRDS_CPL': 1, 'NTHRDS_GLC': 1} 
+Pes setting: rootpe      is {'ROOTPE_OCN': 0, 'ROOTPE_LND': 0, 'ROOTPE_ATM': 0, 'ROOTPE_ICE': 0, 'ROOTPE_WAV': 0, 'ROOTPE_CPL': 0, 'ROOTPE_ROF': 0, 'ROOTPE_GLC': 0} 
+Pes setting: pstrid      is {} 
+Pes other settings: {}
+Pes comments: none
+ Compset is: SSP370_DATM%CPLHIST_CLM50%SP_SICE_SOCN_MOSART_SGLC_SWAV 
+ Grid is: a%0.9x1.25_l%0.9x1.25_oi%null_r%r05_g%null_w%null_m%gx1v7 
+ Components in compset are: ['datm', 'clm', 'sice', 'socn', 'mosart', 'sglc', 'swav', 'sesp', 'drv', 'dart'] 
+No project info available
+No charge_account info available, using value from PROJECT
+No project info available
+cesm model version found: release-cesm2.1.4
+Batch_system_type is none
+ Creating Case directory /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/scratch/RRCase5_1
+Creating batch scripts
+Writing case.run script from input template /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/cime/config/cesm/machines/template.case.run
+Creating file .case.run
+Writing case.st_archive script from input template /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/cime/config/cesm/machines/template.st_archive
+Creating file case.st_archive
+Creating user_nl_xxx files for components and cpl
+If an old case build already exists, might want to run 'case.build --clean' before building
+You can now run './preview_run' to get more info on how your case will be run
+Creating component namelists
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/cime/src/components/data_comps/datm/cime_config/buildnml
+   ....  Obtaining DATM model domain info from first stream file: CPLHISTForcing.Solar
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/components/clm//cime_config/buildnml
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/cime/src/components/stub_comps/sice/cime_config/buildnml
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/cime/src/components/stub_comps/socn/cime_config/buildnml
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/components/mosart//cime_config/buildnml
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/cime/src/components/stub_comps/sglc/cime_config/buildnml
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/cime/src/components/stub_comps/swav/cime_config/buildnml
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/cime/src/components/stub_comps/sesp/cime_config/buildnml
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/cime/src/drivers/mct/cime_config/buildnml
+Finished creating component namelists
+Creating component namelists
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/cime/src/components/data_comps/datm/cime_config/buildnml
+   ....  Obtaining DATM model domain info from first stream file: CPLHISTForcing.Solar
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/components/clm//cime_config/buildnml
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/cime/src/components/stub_comps/sice/cime_config/buildnml
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/cime/src/components/stub_comps/socn/cime_config/buildnml
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/components/mosart//cime_config/buildnml
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/cime/src/components/stub_comps/sglc/cime_config/buildnml
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/cime/src/components/stub_comps/swav/cime_config/buildnml
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/cime/src/components/stub_comps/sesp/cime_config/buildnml
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/cime/src/drivers/mct/cime_config/buildnml
+Finished creating component namelists
+Successfully cleaned batch script .case.run
+Creating batch scripts
+Writing case.run script from input template /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/cime/config/cesm/machines/template.case.run
+Creating file .case.run
+Writing case.st_archive script from input template /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/cime/config/cesm/machines/template.st_archive
+Creating file case.st_archive
+If an old case build already exists, might want to run 'case.build --clean' before building
+You can now run './preview_run' to get more info on how your case will be run
+Building case in directory /net/scratch2/a16404ys/Projects/scratch/RRCase5_1
+sharedlib_only is False
+model_only is False
+Generating component namelists as part of build
+Creating component namelists
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/cime/src/components/data_comps/datm/cime_config/buildnml
+   ....  Obtaining DATM model domain info from first stream file: CPLHISTForcing.Solar
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/components/clm//cime_config/buildnml
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/cime/src/components/stub_comps/sice/cime_config/buildnml
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/cime/src/components/stub_comps/socn/cime_config/buildnml
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/components/mosart//cime_config/buildnml
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/cime/src/components/stub_comps/sglc/cime_config/buildnml
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/cime/src/components/stub_comps/swav/cime_config/buildnml
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/cime/src/components/stub_comps/sesp/cime_config/buildnml
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/cime/src/drivers/mct/cime_config/buildnml
+Finished creating component namelists
+Building gptl with output to file /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/scratch/RRCase5_1/bld/gptl.bldlog.240123-215941
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/cime/src/build_scripts/buildlib.gptl
+Building mct with output to file /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/scratch/RRCase5_1/bld/mct.bldlog.240123-215941
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/cime/src/build_scripts/buildlib.mct
+Building pio with output to file /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/scratch/RRCase5_1/bld/pio.bldlog.240123-215941
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/cime/src/build_scripts/buildlib.pio
+Building csm_share with output to file /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/scratch/RRCase5_1/bld/csm_share.bldlog.240123-215941
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/cime/src/build_scripts/buildlib.csm_share
+Component csm_share build complete with 2 warnings
+         - Building clm4_5/clm5_0 Library 
+Building lnd with output to /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/scratch/RRCase5_1/bld/lnd.bldlog.240123-215941
+clm built in 62.065614 seconds
+Building atm with output to /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/scratch/RRCase5_1/bld/atm.bldlog.240123-215941
+Building ice with output to /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/scratch/RRCase5_1/bld/ice.bldlog.240123-215941
+Building ocn with output to /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/scratch/RRCase5_1/bld/ocn.bldlog.240123-215941
+Building rof with output to /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/scratch/RRCase5_1/bld/rof.bldlog.240123-215941
+Building glc with output to /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/scratch/RRCase5_1/bld/glc.bldlog.240123-215941
+Building wav with output to /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/scratch/RRCase5_1/bld/wav.bldlog.240123-215941
+Building esp with output to /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/scratch/RRCase5_1/bld/esp.bldlog.240123-215941
+swav built in 4.081810 seconds
+sglc built in 4.088731 seconds
+socn built in 4.164266 seconds
+sice built in 5.514716 seconds
+sesp built in 5.511880 seconds
+datm built in 5.525865 seconds
+mosart built in 11.135163 seconds
+Building cesm with output to /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/scratch/RRCase5_1/bld/cesm.bldlog.240123-215941 
+Time spent not building: 2.010301 sec
+Time spent building: 165.041887 sec
+MODEL BUILD HAS FINISHED SUCCESSFULLY
+CASE INFO:
+  nodes: 8
+  total tasks: 128
+  tasks per node: 16
+  thread count: 1
+
+BATCH INFO:
+  FOR JOB: case.run
+    ENV:
+      Setting Environment OMP_NUM_THREADS=1
+
+    SUBMIT CMD:
+      None
+
+    MPIRUN (job=case.run):
+      mpirun  -np 128 /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/scratch/RRCase5_1/bld/cesm.exe  >> cesm.log.$LID 2>&1 
+
+  FOR JOB: case.st_archive
+    ENV:
+      Setting Environment OMP_NUM_THREADS=1
+
+    SUBMIT CMD:
+      None
+
+Creating component namelists
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/cime/src/components/data_comps/datm/cime_config/buildnml
+   ....  Obtaining DATM model domain info from first stream file: CPLHISTForcing.Solar
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/components/clm//cime_config/buildnml
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/cime/src/components/stub_comps/sice/cime_config/buildnml
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/cime/src/components/stub_comps/socn/cime_config/buildnml
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/components/mosart//cime_config/buildnml
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/cime/src/components/stub_comps/sglc/cime_config/buildnml
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/cime/src/components/stub_comps/swav/cime_config/buildnml
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/cime/src/components/stub_comps/sesp/cime_config/buildnml
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/cime/src/drivers/mct/cime_config/buildnml
+Finished creating component namelists
+Checking that inputdata is available as part of case submission
+Loading input file list: 'Buildconf/cpl.input_data_list'
+Loading input file list: 'Buildconf/mosart.input_data_list'
+Loading input file list: 'Buildconf/datm.input_data_list'
+Loading input file list: 'Buildconf/clm.input_data_list'
+Check case OK
+Starting job script case.run
+Generating namelists for /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/scratch/RRCase5_1
+Creating component namelists
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/cime/src/components/data_comps/datm/cime_config/buildnml
+   ....  Obtaining DATM model domain info from first stream file: CPLHISTForcing.Solar
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/components/clm//cime_config/buildnml
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/cime/src/components/stub_comps/sice/cime_config/buildnml
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/cime/src/components/stub_comps/socn/cime_config/buildnml
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/components/mosart//cime_config/buildnml
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/cime/src/components/stub_comps/sglc/cime_config/buildnml
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/cime/src/components/stub_comps/swav/cime_config/buildnml
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/cime/src/components/stub_comps/sesp/cime_config/buildnml
+   Calling /mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_dyn_alb/cime/src/drivers/mct/cime_config/buildnml
+Finished creating component namelists
+-------------------------------------------------------------------------
+ - Prestage required restarts into /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/scratch/RRCase5_1/run
+ - Case input data directory (DIN_LOC_ROOT) is /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/inputdata 
+ - Checking for required input datasets in DIN_LOC_ROOT
+-------------------------------------------------------------------------
+2024-01-23 22:02:34 MODEL EXECUTION BEGINS HERE
+run command is mpirun  -np 128 /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/scratch/RRCase5_1/bld/cesm.exe  >> cesm.log.$LID 2>&1  
+2024-01-23 22:56:41 MODEL EXECUTION HAS FINISHED
+Starting job script case.st_archive
+st_archive starting
+moving /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/scratch/RRCase5_1/run/cesm.log.240123-220233.gz to /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/archive/case/logs/cesm.log.240123-220233.gz
+moving /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/scratch/RRCase5_1/run/atm.log.240123-220233.gz to /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/archive/case/logs/atm.log.240123-220233.gz
+moving /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/scratch/RRCase5_1/run/lnd.log.240123-220233.gz to /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/archive/case/logs/lnd.log.240123-220233.gz
+moving /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/scratch/RRCase5_1/run/cpl.log.240123-220233.gz to /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/archive/case/logs/cpl.log.240123-220233.gz
+moving /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/scratch/RRCase5_1/run/rof.log.240123-220233.gz to /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/archive/case/logs/rof.log.240123-220233.gz
+-------------------------------------------
+Archiving restarts for date date(2101, 1, 1, 0, 0, 0)
+-------------------------------------------
+Archiving restarts for datm (atm)
+Archiving restarts for clm (lnd)
+copying file /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/scratch/RRCase5_1/run/RRCase5_1.clm2.r.2101-01-01-00000.nc to /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/archive/case/rest/2101-01-01-00000/RRCase5_1.clm2.r.2101-01-01-00000.nc
+Copying /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/scratch/RRCase5_1/run/RRCase5_1.clm2.h0.2100-02-01-00000.nc to /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/archive/case/rest/2101-01-01-00000/RRCase5_1.clm2.h0.2100-02-01-00000.nc
+ WARNING: ncdump -v locfnh /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/scratch/RRCase5_1/run/RRCase5_1.clm2.rh0.2101-01-01-00000.nc  failed rc=1
+    out=
+    err=ncdump: locfnh: No such variable
+copying file /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/scratch/RRCase5_1/run/RRCase5_1.clm2.rh0.2101-01-01-00000.nc to /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/archive/case/rest/2101-01-01-00000/RRCase5_1.clm2.rh0.2101-01-01-00000.nc
+Archiving restarts for mosart (rof)
+copying file /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/scratch/RRCase5_1/run/RRCase5_1.mosart.r.2101-01-01-00000.nc to /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/archive/case/rest/2101-01-01-00000/RRCase5_1.mosart.r.2101-01-01-00000.nc
+ WARNING: ncdump -v locfnh /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/scratch/RRCase5_1/run/RRCase5_1.mosart.rh0.2101-01-01-00000.nc  failed rc=1
+    out=
+    err=ncdump: locfnh: No such variable
+copying file /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/scratch/RRCase5_1/run/RRCase5_1.mosart.rh0.2101-01-01-00000.nc to /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/archive/case/rest/2101-01-01-00000/RRCase5_1.mosart.rh0.2101-01-01-00000.nc
+Archiving restarts for drv (cpl)
+copying file /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/scratch/RRCase5_1/run/RRCase5_1.cpl.r.2101-01-01-00000.nc to /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/archive/case/rest/2101-01-01-00000/RRCase5_1.cpl.r.2101-01-01-00000.nc
+Archiving restarts for dart (esp)
+Archiving history files for datm (atm)
+Archiving history files for clm (lnd)
+copying /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/scratch/RRCase5_1/run/RRCase5_1.clm2.h0.2100-02-01-00000.nc to /mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/archive/case/lnd/hist/RRCase5_1.clm2.h0.2100-02-01-00000.nc 
+Archiving history files for mosart (rof)
+Archiving history files for drv (cpl)
+Archiving history files for dart (esp)
+st_archive completed

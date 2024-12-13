@@ -1,0 +1,63 @@
+#!/bin/bash  --login
+#$ -pe smp.pe 16
+# Yuan Sun, 2023-12-31, Manchester, UK
+# This script is used to project1 case0 with default urban albedo in csf3
+export HOME="/mnt/iusers01/fatpou01/sees01/a16404ys"
+export CASE_SCRIPT="/mnt/iusers01/fatpou01/sees01/a16404ys/CESM/my_cesm_sandbox_2.1.4_DynUrb_DynAlb/cime/scripts"
+export CASE_NAME="/mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/scratch/test"
+export COMPSET=SSP370_DATM%CPLHIST_CLM50%SP_SICE_SOCN_MOSART_SGLC_SWAV
+export RES=f09_g17
+export MACH=csf3
+export RESTART="/mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/scratch/20231212spinup/run"
+if [ -d "${CASE_NAME}" ]; then
+   rm -rf "${CASE_NAME}"
+   echo "'${CASE_NAME}' exits but is deleted"
+   echo "create a new case in '${CASE_NAME}'"
+   cd ${CASE_SCRIPT}
+   ./create_newcase --case ${CASE_NAME} --compset ${COMPSET} --res ${RES} --machine ${MACH}  --run-unsupported
+else
+   echo "create a new case in '${CASE_NAME}'"
+   cd ${CASE_SCRIPT}
+   ./create_newcase --case ${CASE_NAME} --compset ${COMPSET} --res ${RES} --machine ${MACH} --run-unsupported
+fi
+
+cd ${CASE_NAME}
+./xmlchange RUN_STARTDATE=2015-01-01
+#./xmlchange NTASKS=512
+#./xmlchange STOP_OPTION=nyears
+#./xmlchange STOP_N=5
+#./xmlchange RESUBMIT=16
+./xmlchange NTASKS=16
+./xmlchange STOP_OPTION=nmonths
+./xmlchange STOP_N=1
+./xmlchange DATM_CPLHIST_CASE="b.e21.BSSP370cmip6.f09_g17.CMIP6-SSP3-7.0.102"
+./xmlchange DATM_CPLHIST_YR_ALIGN=2015
+./xmlchange DATM_CPLHIST_YR_START=2015
+./xmlchange DATM_CPLHIST_YR_END=2100
+./xmlchange DATM_CPLHIST_DIR=/mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/inputdata/initializationfromBowen/hist.mon
+./xmlchange NTHRDS=1
+./xmlchange JOB_WALLCLOCK_TIME=96:00:00
+./case.setup
+./preview_namelists
+
+cd ${CASE_NAME}
+cp ${RESTART}/* ${CASE_NAME}/run
+echo "Dynamic_UrbanAlbedoRoof = .false.">> user_nl_clm
+echo "do_transient_urban = .true.">> user_nl_clm
+echo "fsurdat = '/mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/inputdata/lnd/clm2/surfdata_map/surfdata_0.9x1.25_SSP5-8.5_78pfts_CMIP6_simyr2015_GaoUrbanveg2015_c230601.nc' " >> user_nl_clm
+echo "flanduse_timeseries = '/mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/inputdata/lnd/clm2/surfdata_map/landuse.timeseries_0.9x1.25_SSP3-7.0_78_CMIP6_1850-2100_c230517.nc'" >> user_nl_clm
+echo "maxpatch_pft = 79" >> user_nl_clm
+echo "hist_empty_htapes = .true." >> user_nl_clm
+#echo "calc_human_stress_indices = 'ALL'" >> user_nl_clm
+#echo "hist_dov2xy = .false.,.true." >> user_nl_clm
+#echo "hist_type1d_pertape = 'LAND',' '" >> user_nl_clm
+#echo "hist_nhtfrq= 0,0" >> user_nl_clm
+#echo "hist_mfilt= 12,12" >> user_nl_clm
+#echo "hist_fincl1 = 'URBAN_AC','URBAN_HEAT','TBUILD_MAX','TBUILD','TSA_U','RAIN','FLDS','QBOT','PBOT','TBOT','SNOW','TREFMXAV_U','TREFMNAV_U', 'TREFMXAV_R', 'TREFMNAV_R', 'WASTEHEAT', 'HIA_R','HIA_U','APPAR_TEMP_U','APPAR_TEMP_R','SWBGT_U','SWBGT_R','HUMIDEX_U'" >> user_nl_clm
+#echo "hist_fincl2 = 'WIND','FSDS','HIA_R','HIA_U','APPAR_TEMP_U','APPAR_TEMP_R','SWBGT_U','SWBGT_R','HUMIDEX_U','HUMIDEX_R','DISCOIS_R','DISCOIS_U','EFLX_LH_TOT_R','EFLX_LH_TOT_U','EPT_U','EPT_R','FGR_U','FGR_R','FIRA_R','FIRA_U','FIRE_U','FIRE_R','FSA_U','FSA_R','FSH_U','FSH_R','FSM_U','FSM_R','QRUNOFF_U','QRUNOFF_R','RH2M_U','RH2M_R','TBUILD','TEQ_R','TEQ_U','TREFMNAV_U','TREFMNAV_R','TREFMXAV_U','TREFMXAV_R','TSA_R','TSA_U','URBAN_AC','URBAN_HEAT','WASTEHEAT','WBT_U','WBT_R','WBA_U','WBA_R','TG_U','TG_R','FLDS','QBOT','PBOT','TBOT','RAIN','SNOW','EFLXBUILD','TBUILD_MAX'" >> user_nl_clm
+echo "rtmhist_nhtfrq = -876000" >> user_nl_mosart
+./preview_namelists
+./case.setup --reset
+./case.build
+./preview_run
+./case.submit

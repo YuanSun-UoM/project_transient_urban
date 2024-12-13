@@ -1,0 +1,11 @@
+/mnt/iusers01/fatpou01/sees01/a16404ys/scratch/Projects/scratch/RRCase5_1/env_mach_specific.xml already exists, delete to replace
+      module command is /opt/clusterware/opt/modules/bin/modulecmd python load compilers/gcc/8.2.0 libs/gcc/netcdf/4.9.2 mpi/gcc/openmpi/4.1.2-gcc-8.2.0 libs/blas/3.6.0/gcc-4.8.5 libs/lapack/3.5.0/gcc-4.8.5 apps/cmake/3.5.2/gcc-4.8.5
+      module command is /opt/clusterware/opt/modules/bin/modulecmd python load compilers/gcc/8.2.0 libs/gcc/netcdf/4.9.2 mpi/gcc/openmpi/4.1.2-gcc-8.2.0 libs/blas/3.6.0/gcc-4.8.5 libs/lapack/3.5.0/gcc-4.8.5 apps/cmake/3.5.2/gcc-4.8.5
+submit_jobs case.run
+Submit job case.run
+check for resubmit
+dout_s True 
+mach csf3 
+resubmit_num 0
+Submit job case.st_archive
+ERROR: No result from jobs [('case.run', None), ('case.st_archive', 'case.run or case.test')]

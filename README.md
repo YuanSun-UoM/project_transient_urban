@@ -2,6 +2,8 @@
 
 - The repo is used to store materials for developing transient albedo in CESM.
 
+## [1_code_DynamicUrbanAlbedo](./1_code_DynamicUrbanAlbedo)
+
 ```
 # link to the manuscript code repo
 git init /Users/user/Desktop/YuanSun-UoM/project_transient_albedo
@@ -11,8 +13,6 @@ git submodule add https://github.com/envdes/code_DynamicUrbanAlbedo.git 1_code_D
 # link to the CTSM code repo
 git submodule add https://github.com/YuanSun-UoM/ctsm_DynamicUrbanAlbedo.git 2_ctsm_DynamicUrbanAlbedo
 ```
-
-## [1_code_DynamicUrbanAlbedo](./1_code_DynamicUrbanAlbedo)
 
 
 
@@ -27,7 +27,6 @@ git submodule add https://github.com/YuanSun-UoM/ctsm_DynamicUrbanAlbedo.git 2_c
 # upload the standard code to this repo, taged 'release-clm5.0.30'
 
 # upload the modified code, taged 'release-clm5.0.30_transient_albedo'
-
 
 ```
 
